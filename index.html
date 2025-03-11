@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reál App Letöltés</title>
+    <script>
+        function redirect() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=hu.real.trvreal";
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = "https://apps.apple.com/hu/app/re%C3%A1l-app/id6740630018";
+            }
+        }
+    </script>
+</head>
+<body onload="redirect()">
+    <h1>Válassz platformot</h1>
+    <p><a href="https://apps.apple.com/hu/app/re%C3%A1l-app/id6740630018">iOS (App Store)</a></p>
+    <p><a href="https://play.google.com/store/apps/details?id=hu.real.trvreal">Android (Google Play)</a></p>
+</body>
+</html>
